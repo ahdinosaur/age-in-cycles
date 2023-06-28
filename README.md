@@ -2,23 +2,31 @@
 
 What is your age in orbital body cycles?
 
-## install
-
-TODO
+## example
 
 ```shell
-npm install -g age-in-cycles
+./age-in-cycles --start '2000-01-01'
+```
+
+```txt
+Age in Mercury cycles: 97.54
+Age in Venus cycles: 38.18
+Age in Earth cycles: 23.49
+Age in Moon cycles: 290.55
+Age in Mars cycles: 12.49
+Age in Jupiter cycles: 1.98
+Age in Saturn cycles: 0.80
+Age in Uranus cycles: 0.28
+Age in Neptune cycles: 0.14
+Age in Pluto cycles: 0.09
 ```
 
 ## usage
 
 ```txt
-Usage: age-in-cycles [options] <orbitalBody>
+Usage: age-in-cycles [options]
 
 what is your age in orbital body cycles?
-
-Arguments:
-  orbitalBody     orbital body (Mercury, Venus, Earth, Moon, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto)
 
 Options:
   -V, --version   output the version number
@@ -27,8 +35,10 @@ Options:
   -h, --help      display help for command
 ```
 
-## example
+## install
+
+TODO
 
 ```shell
-./age-in-cycles Moon --start '2000-01-01'
+npm install -g age-in-cycles
 ```

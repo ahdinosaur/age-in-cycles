@@ -18,7 +18,7 @@ const MINUTES_IN_HOUR = 60
 const SECONDS_IN_MINUTE = 60
 const SECONDS_IN_DAY = HOURS_IN_DAY * MINUTES_IN_HOUR * SECONDS_IN_MINUTE
 
-export function getAgeInCycles(orbitalBody, startTime, endTime) {
+export function getAgeInCyclesForOrbitalBody(orbitalBody, startTime, endTime) {
   if (!(orbitalBody in ORBITAL_PERIODS_IN_EARTH_DAYS)) {
     throw new Error(`Unexpected orbital body: ${orbitalBody}`)
   }
@@ -31,4 +31,11 @@ export function getAgeInCycles(orbitalBody, startTime, endTime) {
   const ageInCycles = lengthInSeconds / orbitalPeriodInSeconds
 
   return ageInCycles
+}
+
+export function getAgeInCycles(startTime, endTime) {
+  return Object.keys(ORBITAL_PERIODS_IN_EARTH_DAYS).reduce((sofar, next) => {
+    sofar[next] = getAgeInCyclesForOrbitalBody(next, startTime, endTime)
+    return sofar
+  }, {})
 }
