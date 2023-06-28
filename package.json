@@ -1,0 +1,27 @@
+{
+  "name": "age-in-cycles",
+  "version": "0.0.0",
+  "description": "What is your age in orbital body cycles?",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": "Src/bin.js",
+  "scripts": {
+    "lint": "prettier --check \"./(src|test|bench)/**/*.js\"",
+    "format": "prettier --write \"./(src|test|bench)/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahdinosaur/age-in-cycles.git"
+  },
+  "author": "Michael Williams",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ahdinosaur/age-in-cycles/issues"
+  },
+  "homepage": "https://github.com/ahdinosaur/age-in-cycles#readme",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "date-fns": "^2.30.0",
+    "prettier": "^2.8.8"
+  }
+}
